@@ -1,3 +1,10 @@
 .backButton {
+  display: flex;
+  gap: 0.5em;
   border: none;
+  background-color: var(--main-color);
+  color: var(--main-font-color);
+  font: var(--main-font);
+  padding: 1em 1.2em;
+  border-radius: 0.25em;
 }
