@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import styles from './App.module.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -10,7 +9,6 @@ function App(): JSX.Element {
     <Router>
       <div className={styles.App}>
         <header className={styles['App-header']}>
-          <img src={logo} className={styles['App-logo']} alt="logo" />
           <p>Hello Vite + React!</p>
           <p>
             <button onClick={() => setCount((count) => count + 1)}>
