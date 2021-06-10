@@ -1,27 +1,13 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-:root {
-  --main-font: 'SF Pro', sans-serif;
-
-  /* colors */
-  --main-font-color: #0d1a75;
-  --secondary-font-color: #fff;
-  --main-color: #e5e2f3;
-  --secondary-color: #f3f1f9;
-  --hint-color: #ffbcc6;
-}
-
 body {
   margin: 0;
-  font-family: var(--main-font);
-  color: var(--main-font-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
