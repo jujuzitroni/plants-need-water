@@ -11,5 +11,5 @@
 }
 
 .backButton:active {
-  background-color: #afa9c9;
+  background-color: var(--backButton-active);
 }
