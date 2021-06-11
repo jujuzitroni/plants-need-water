@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.day {
+  color: var(--main-font-color);
+}
+
+.date {
+  color: var(--main-font-color);
+}
