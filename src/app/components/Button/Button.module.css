@@ -1,0 +1,7 @@
+.submit {
+  background-color: var(--main-font-color);
+}
+
+.delete {
+  background-color: var(--hint-color);
+}

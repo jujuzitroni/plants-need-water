@@ -9,6 +9,7 @@ export default {
 
 export const SubmitButton = (): JSX.Element => (
   <Button
+    variant="submit"
     onClick={() => {
       console.log('clicked');
     }}
@@ -19,6 +20,7 @@ export const SubmitButton = (): JSX.Element => (
 
 export const DeleteButton = (): JSX.Element => (
   <Button
+    variant="delete"
     onClick={() => {
       console.log('clicked');
     }}

@@ -4,11 +4,12 @@ import styles from './Button.module.css';
 type ButtonProps = {
   onClick: () => void;
   children?: ReactNode;
+  variant: 'submit' | 'delete';
 };
 
-function Button({ onClick, children }: ButtonProps): JSX.Element {
+function Button({ onClick, children, variant }: ButtonProps): JSX.Element {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={styles[variant]} onClick={onClick}>
       {children}
     </button>
   );
