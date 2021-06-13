@@ -1,52 +1,59 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './App.module.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+type Habit = {
+  id: string;
+  name: string;
+  color: string;
+  dateCreated: string;
+  datesCompleted: string[];
+  rating: string;
+};
+
+function toListElement(habit: Habit): JSX.Element {
+  return (
+    <li key={habit.id}>
+      <input type="checkbox" /> {habit.name}
+      <div
+        className={styles.habitColor}
+        style={{ backgroundColor: habit.color }}
+      ></div>
+    </li>
+  );
+}
 
 function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
+  const habits: Habit[] = [
+    {
+      id: '1',
+      name: 'take a break',
+      color: 'hotpink',
+      dateCreated: '12.3.21',
+      datesCompleted: [],
+      rating: 'nice',
+    },
+    {
+      id: '2',
+      name: 'take a break',
+      color: 'hotpink',
+      dateCreated: '12.3.21',
+      datesCompleted: [],
+      rating: 'nice',
+    },
+    {
+      id: '3',
+      name: 'take a break',
+      color: 'hotpink',
+      dateCreated: '12.3.21',
+      datesCompleted: [],
+      rating: 'nice',
+    },
+  ];
 
   return (
     <Router>
-      <div className={styles.App}>
-        <header className={styles['App-header']}>
-          <p>Hello Vite + React!</p>
-          <p>
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is: {count}
-            </button>
-          </p>
-          <p>
-            Edit <code>App.tsx</code> and save to test HMR updates.
-          </p>
-          <p>
-            <a
-              className={styles['App-link']}
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-            {' | '}
-            <a
-              className={styles['App-link']}
-              href="https://vitejs.dev/guide/features.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Vite Docs
-            </a>
-          </p>
-        </header>
-        <Switch>
-          <Route path="/about">
-            <main>About</main>
-          </Route>
-          <Route path="/">
-            <main>Home</main>
-          </Route>
-        </Switch>
-      </div>
+      <ul>{habits.map(toListElement)}</ul>
     </Router>
   );
 }
