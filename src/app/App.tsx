@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './App.module.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreateHabit from './pages/CreateHabit/CreateHabit';
+import AddHabit from './components/AddHabit/AddHabit';
 
 type Habit = {
   id: string;
@@ -53,7 +55,19 @@ function App(): JSX.Element {
 
   return (
     <Router>
-      <ul>{habits.map(toListElement)}</ul>
+      <Switch>
+        <Route path="/create-habit">
+          <main>
+            <CreateHabit />
+          </main>
+        </Route>
+        <Route path="/">
+          <main>
+            <ul>{habits.map(toListElement)}</ul>
+            <AddHabit link={'/create-habit'} />
+          </main>
+        </Route>
+      </Switch>
     </Router>
   );
 }
