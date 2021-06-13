@@ -1,3 +1,18 @@
 .container {
-  background-color: blueviolet;
+  display: grid;
+  gap: 0.5em;
+  font: var(--main-font);
+}
+
+.input {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 0.25em;
+  padding: 1.5em 0.5em;
+  max-width: 30em;
+}
+
+.input::placeholder {
+  color: var(--main-font-color);
+  opacity: 36%;
 }
