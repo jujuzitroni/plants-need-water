@@ -19,3 +19,14 @@
   --addButton-active: #0b134e;
   --deleteButton-active: #cc8a93;
 }
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
