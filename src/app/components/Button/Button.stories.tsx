@@ -26,6 +26,6 @@ export const DeleteButton = (): JSX.Element => (
     }}
   >
     <DeleteIcon />
-    Delete
+    Delete Habit
   </Button>
 );
