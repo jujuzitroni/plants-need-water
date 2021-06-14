@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Input.module.css';
+import styles from './HabitInput.module.css';
 
-function Input(): JSX.Element {
+function HabitInput(): JSX.Element {
   return (
     <label className={styles.container}>
       Enter new habit
@@ -10,4 +10,4 @@ function Input(): JSX.Element {
   );
 }
 
-export default Input;
+export default HabitInput;
