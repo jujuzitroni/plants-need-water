@@ -1,9 +1,6 @@
 .submit {
   background-color: var(--main-font-color);
   color: var(--secondary-font-color);
-  font: var(--main-font);
-  border: none;
-  border-radius: 0.25em;
   padding: 1em 5em;
 }
 
@@ -13,12 +10,10 @@
 
 .delete {
   background-color: var(--hint-color);
-  border: none;
-  border-radius: 0.25em;
   padding: 0.5em 1.5em;
-  font: var(--main-font);
   font-weight: bold;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
   gap: 0.5em;
 }
