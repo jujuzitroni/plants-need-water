@@ -2,8 +2,8 @@ import React from 'react';
 
 function PlusLabel(): JSX.Element {
   return (
-    <svg width="36" height="34.188" viewBox="0 0 36 34.188">
-      <g id="Group_8" data-name="Group 8" transform="translate(-55 -696.144)">
+    <svg width="36" height="36" viewBox="0 0 36 36">
+      <g transform="translate(-55 -696.144)">
         <line
           y2="26.188"
           transform="translate(73.073 700.144)"
