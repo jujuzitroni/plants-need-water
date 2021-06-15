@@ -15,7 +15,7 @@ export const AddNewLink = (): JSX.Element => (
 
 export const AboutLink = (): JSX.Element => (
   <PageLink variant="about" link="#">
-    <span>About plants need water</span>
+    <span>about plants need water</span>
   </PageLink>
 );
 
