@@ -15,9 +15,9 @@
   --hint-color: #ffbcc6;
 
   /* button colors */
-  --backButton-active: #afa9c9;
-  --addButton-active: #0b134e;
-  --deleteButton-active: #cc8a93;
+  --main-color-active: #afa9c9;
+  --main-font-color-active: #0b134e;
+  --hint-color-active: #cc8a93;
 }
 
 body {
