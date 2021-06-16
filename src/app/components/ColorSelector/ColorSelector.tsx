@@ -6,9 +6,12 @@ type ColorSelectorProps = {
 
 function ColorSelector({ children }: ColorSelectorProps): JSX.Element {
   return (
-    <select name="colorSelector" id="">
-      {children}
-    </select>
+    <label>
+      <span>choose color</span>
+      <select name="colorSelector" id="">
+        {children}
+      </select>
+    </label>
   );
 }
 
