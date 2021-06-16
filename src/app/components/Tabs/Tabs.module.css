@@ -1,0 +1,12 @@
+.tabs {
+  display: grid;
+  grid-auto-flow: column;
+  background-color: var(--main-color);
+  opacity: 45%;
+  padding: 1em;
+}
+
+.tabs__active {
+  background-color: #fff;
+  opacity: 100%;
+}
