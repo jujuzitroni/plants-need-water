@@ -1,0 +1,23 @@
+.submit {
+  background-color: var(--main-font-color);
+  color: var(--secondary-font-color);
+  padding: 1em 5em;
+}
+
+.submit:active {
+  background-color: var(--main-font-color-active);
+}
+
+.delete {
+  background-color: var(--hint-color);
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.delete:active {
+  background-color: var(--hint-color-active);
+}

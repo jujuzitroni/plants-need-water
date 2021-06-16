@@ -13,6 +13,11 @@
   --main-color: #e5e2f3;
   --secondary-color: #f3f1f9;
   --hint-color: #ffbcc6;
+
+  /* button colors */
+  --main-color-active: #afa9c9;
+  --main-font-color-active: #0b134e;
+  --hint-color-active: #cc8a93;
 }
 
 body {
@@ -24,4 +29,10 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  font: var(--main-font);
+  border: none;
+  border-radius: 0.25em;
 }
