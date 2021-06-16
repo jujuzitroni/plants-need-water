@@ -1,15 +1,22 @@
-import React, { ReactNode } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
+
+const colors = ['red', 'pink', 'grey', 'lime'];
 
 type ColorSelectorProps = {
-  children: ReactNode;
+  selectColor: Dispatch<SetStateAction<string>>;
 };
 
-function ColorSelector({ children }: ColorSelectorProps): JSX.Element {
+function ColorSelector({ selectColor }: ColorSelectorProps): JSX.Element {
   return (
     <label>
       <span>choose color</span>
-      <select name="colorSelector" id="">
-        {children}
+      <select
+        name="colorSelector"
+        onChange={(event) => selectColor(event.target.value)}
+      >
+        {colors.map((color) => (
+          <option value={color}>{color}</option>
+        ))}
       </select>
     </label>
   );

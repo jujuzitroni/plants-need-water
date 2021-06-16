@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
 import ColorSelector from '../../components/ColorSelector/ColorSelector';
@@ -6,6 +6,8 @@ import HabitInput from '../../components/HabitInput/HabitInput';
 import styles from './CreateHabit.module.css';
 
 function CreateHabit(): JSX.Element {
+  const [color, selectColor] = useState('red');
+  console.log(color);
   return (
     <div className={styles.createPage}>
       <header>
@@ -13,8 +15,8 @@ function CreateHabit(): JSX.Element {
       </header>
       <form>
         <HabitInput />
-        <ColorSelector children />
-        <Button variant="submit" onClick={console.log('submitted')} />
+        <ColorSelector selectColor={selectColor} />
+        <Button variant="submit" onClick={() => console.log('submitted')} />
       </form>
     </div>
   );
