@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  justify-items: center;
+}
+
+.day {
+  color: var(--main-font-color);
+  font-size: 2em;
+}
+
+.date {
+  color: var(--main-font-color);
+  font-size: 5em;
+}
