@@ -1,5 +1,7 @@
 import React from 'react';
 import BackButton from '../../components/BackButton/BackButton';
+import Button from '../../components/Button/Button';
+import HabitInput from '../../components/HabitInput/HabitInput';
 import styles from './CreateHabit.module.css';
 
 function CreateHabit(): JSX.Element {
@@ -9,13 +11,13 @@ function CreateHabit(): JSX.Element {
         <BackButton />
       </header>
       <form>
-        <input />
+        <HabitInput />
         <select name="color" id="">
           <option value="red">red</option>
           <option value="blue">blue</option>
           <option value="yellow">yellow</option>
         </select>
-        <button>submit</button>
+        <Button variant="submit" onClick={alert('submitted!')} />
       </form>
     </div>
   );
