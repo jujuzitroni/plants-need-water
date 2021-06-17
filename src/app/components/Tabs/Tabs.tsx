@@ -4,7 +4,7 @@ import styles from './Tabs.module.css';
 
 function getActiveClass(pathname: string): string | undefined {
   const location = useLocation();
-  if (!location.pathname.includes(pathname)) {
+  if (location.pathname === pathname) {
     return;
   }
   return styles.tabs__active;
