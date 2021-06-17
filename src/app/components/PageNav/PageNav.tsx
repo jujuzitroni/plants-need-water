@@ -5,9 +5,9 @@ import styles from './PageNav.module.css';
 function getActiveClass(pathname: string): string | undefined {
   const location = useLocation();
   if (location.pathname === pathname) {
-    return;
+    return styles.tabs__active;
   }
-  return styles.tabs__active;
+  return;
 }
 
 function PageNav(): JSX.Element {
