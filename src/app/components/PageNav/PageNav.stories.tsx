@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import PageNav from './PageNav';
 
 export default {
@@ -6,4 +7,13 @@ export default {
   component: PageNav,
 };
 
-export const TabBar = (): JSX.Element => <PageNav />;
+export const Home = (): JSX.Element => (
+  <MemoryRouter initialEntries={['/home']}>
+    <PageNav />
+  </MemoryRouter>
+);
+export const About = (): JSX.Element => (
+  <MemoryRouter initialEntries={['/about']}>
+    <PageNav />
+  </MemoryRouter>
+);
