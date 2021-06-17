@@ -9,6 +9,7 @@
 
   /* colors */
   --main-font-color: #0d1a75;
+  --main-font-color-inactive: rgba(13, 26, 117, 0.45);
   --secondary-font-color: #fff;
   --main-color: #e5e2f3;
   --secondary-color: #f3f1f9;
