@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './App.module.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Tabs from './components/Tabs/Tabs';
+import PageNav from './components/PageNav/PageNav';
 
 function App(): JSX.Element {
   return (
     <Router>
       <div className={styles.App}>
         <header>
-          <Tabs />
+          <PageNav />
         </header>
         <Switch>
           <Route path="/about">

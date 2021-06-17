@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import styles from './Tabs.module.css';
+import styles from './PageNav.module.css';
 
 function getActiveClass(pathname: string): string | undefined {
   const location = useLocation();
@@ -10,7 +10,7 @@ function getActiveClass(pathname: string): string | undefined {
   return styles.tabs__active;
 }
 
-function Tabs(): JSX.Element {
+function PageNav(): JSX.Element {
   return (
     <nav className={styles.tabs}>
       <Link className={getActiveClass('/home')} to="/home">
@@ -23,4 +23,4 @@ function Tabs(): JSX.Element {
   );
 }
 
-export default Tabs;
+export default PageNav;
