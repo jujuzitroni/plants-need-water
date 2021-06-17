@@ -15,7 +15,7 @@ function CreateHabit(): JSX.Element {
       </header>
       <form>
         <HabitInput />
-        <ColorSelector selectColor={selectColor} />
+        <ColorSelector onSelectColor={selectColor} />
         <Button variant="submit" onClick={() => console.log('submitted')} />
       </form>
     </div>

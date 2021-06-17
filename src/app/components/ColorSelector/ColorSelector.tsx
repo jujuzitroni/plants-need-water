@@ -3,16 +3,16 @@ import React, { Dispatch, SetStateAction } from 'react';
 const colors = ['red', 'pink', 'grey', 'lime'];
 
 type ColorSelectorProps = {
-  selectColor: Dispatch<SetStateAction<string>>;
+  onSelectColor: Dispatch<SetStateAction<string>>;
 };
 
-function ColorSelector({ selectColor }: ColorSelectorProps): JSX.Element {
+function ColorSelector({ onSelectColor }: ColorSelectorProps): JSX.Element {
   return (
     <label>
       <span>choose color</span>
       <select
         name="colorSelector"
-        onChange={(event) => selectColor(event.target.value)}
+        onChange={(event) => onSelectColor(event.target.value)}
       >
         {colors.map((color) => (
           <option value={color}>{color}</option>
