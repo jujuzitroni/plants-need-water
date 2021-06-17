@@ -13,7 +13,7 @@ function getActiveClass(pathname: string) {
 function Tabs(): JSX.Element {
   return (
     <div className={styles.tabs}>
-      <Link className={getActiveClass('/')} to="/">
+      <Link className={getActiveClass('/home')} to="/home">
         today
       </Link>
       <Link className={getActiveClass('/about')} to="/about">

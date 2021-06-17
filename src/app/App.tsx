@@ -17,7 +17,7 @@ function App(): JSX.Element {
               <p>Hello Vite + React!</p>
             </main>
           </Route>
-          <Route path="/">
+          <Route path="/home">
             <main>Home</main>
           </Route>
         </Switch>
