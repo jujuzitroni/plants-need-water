@@ -12,14 +12,14 @@ function getActiveClass(pathname: string): string | undefined {
 
 function Tabs(): JSX.Element {
   return (
-    <div className={styles.tabs}>
+    <nav className={styles.tabs}>
       <Link className={getActiveClass('/home')} to="/home">
         today
       </Link>
       <Link className={getActiveClass('/about')} to="/about">
         calendar
       </Link>
-    </div>
+    </nav>
   );
 }
 
