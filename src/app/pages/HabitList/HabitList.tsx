@@ -1,7 +1,7 @@
 import React from 'react';
-import PlusIcon from '../../../components/Icons/PlusIcon';
-import PageLink from '../../../components/PageLink/PageLink';
-import SwipeDate from '../../../components/SwipeDate/SwipeDate';
+import PlusIcon from '../../components/Icons/PlusIcon';
+import PageLink from '../../components/PageLink/PageLink';
+import SwipeDate from '../../components/SwipeDate/SwipeDate';
 import styles from './HabitList.module.css';
 
 function HabitList(): JSX.Element {
