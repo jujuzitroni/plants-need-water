@@ -20,7 +20,7 @@ function toListElement(habit: Habit): JSX.Element {
       <div
         className={styles.habitColor}
         style={{ backgroundColor: habit.color }}
-      ></div>
+      />
     </li>
   );
 }
