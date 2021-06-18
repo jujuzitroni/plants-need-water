@@ -1,0 +1,12 @@
+.placeholder {
+  display: grid;
+  gap: 2em;
+  background-color: var(--main-color);
+  max-width: 25em;
+  border-radius: 0.25em;
+  padding: 2em;
+}
+
+.placeholder p {
+  margin: 0;
+}
