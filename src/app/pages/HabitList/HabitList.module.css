@@ -8,3 +8,7 @@
   background-color: var(--secondary-color);
   height: 5em;
 }
+
+.habitColor {
+  height: 2em;
+}
