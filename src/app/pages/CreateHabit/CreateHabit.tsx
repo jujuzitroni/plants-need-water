@@ -7,7 +7,6 @@ import styles from './CreateHabit.module.css';
 
 function CreateHabit(): JSX.Element {
   const [color, selectColor] = useState('red');
-  console.log(color);
   return (
     <div className={styles.createPage}>
       <header>
