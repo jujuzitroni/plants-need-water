@@ -4,6 +4,18 @@ import Button from '../../components/Button/Button';
 import ColorSelector from '../../components/ColorSelector/ColorSelector';
 import HabitInput from '../../components/HabitInput/HabitInput';
 import styles from './CreateHabit.module.css';
+import { Habit } from '../HabitList/HabitList';
+
+function addHabit(name: string, color: string): Habit {
+  return {
+    id: '',
+    name,
+    color,
+    dateCreated: new Date().getTime(),
+    datesCompleted: [],
+    rating: '',
+  };
+}
 
 function CreateHabit(): JSX.Element {
   const [color, selectColor] = useState('red');
@@ -11,7 +23,8 @@ function CreateHabit(): JSX.Element {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(color, name);
+    const habit = addHabit(name, color);
+    console.log(habit);
   }
 
   return (

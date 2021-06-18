@@ -4,11 +4,11 @@ import PageLink from '../../components/PageLink/PageLink';
 import SwipeDate from '../../components/SwipeDate/SwipeDate';
 import styles from './HabitList.module.css';
 
-type Habit = {
+export type Habit = {
   id: string;
   name: string;
   color: string;
-  dateCreated: string;
+  dateCreated: number;
   datesCompleted: string[];
   rating: string;
 };
@@ -31,7 +31,7 @@ function HabitList(): JSX.Element {
       id: '1',
       name: 'take a break',
       color: 'hotpink',
-      dateCreated: '12.3.21',
+      dateCreated: 0,
       datesCompleted: [],
       rating: 'nice',
     },
@@ -39,7 +39,7 @@ function HabitList(): JSX.Element {
       id: '2',
       name: 'take a break',
       color: 'hotpink',
-      dateCreated: '12.3.21',
+      dateCreated: 2,
       datesCompleted: [],
       rating: 'nice',
     },
@@ -47,7 +47,7 @@ function HabitList(): JSX.Element {
       id: '3',
       name: 'take a break',
       color: 'hotpink',
-      dateCreated: '12.3.21',
+      dateCreated: 5,
       datesCompleted: [],
       rating: 'nice',
     },
