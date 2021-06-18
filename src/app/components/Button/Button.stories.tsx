@@ -10,8 +10,8 @@ export default {
 export const SubmitButton = (): JSX.Element => (
   <Button
     variant="submit"
-    onClick={() => {
-      console.log('clicked');
+    onSubmit={() => {
+      console.log('submitted');
     }}
   >
     Add new habit
