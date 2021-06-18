@@ -15,7 +15,9 @@ function ColorSelector({ onSelectColor }: ColorSelectorProps): JSX.Element {
         onChange={(event) => onSelectColor(event.target.value)}
       >
         {colors.map((color) => (
-          <option value={color}>{color}</option>
+          <option key={color} value={color}>
+            {color}
+          </option>
         ))}
       </select>
     </label>
