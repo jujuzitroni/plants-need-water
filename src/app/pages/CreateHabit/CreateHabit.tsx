@@ -7,10 +7,11 @@ import styles from './CreateHabit.module.css';
 
 function CreateHabit(): JSX.Element {
   const [color, selectColor] = useState('red');
+  const [name, setName] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(color);
+    console.log(color, name);
   }
 
   return (
@@ -19,7 +20,7 @@ function CreateHabit(): JSX.Element {
         <BackButton />
       </header>
       <form onSubmit={handleSubmit}>
-        <HabitInput />
+        <HabitInput onNameChange={setName} />
         <ColorSelector onSelectColor={selectColor} />
         <Button variant="submit" />
       </form>
