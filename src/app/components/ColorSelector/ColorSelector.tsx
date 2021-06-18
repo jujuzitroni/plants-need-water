@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 
 const colors = ['red', 'pink', 'grey', 'lime'];
 
 type ColorSelectorProps = {
-  onSelectColor: Dispatch<SetStateAction<string>>;
+  onSelectColor: (color: string) => void;
 };
 
 function ColorSelector({ onSelectColor }: ColorSelectorProps): JSX.Element {
