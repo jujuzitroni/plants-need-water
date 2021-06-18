@@ -7,16 +7,14 @@ function App(): JSX.Element {
   return (
     <Router>
       <Switch>
-        <Route path="/create-habit">
-          <main>
+        <main>
+          <Route path="/create-habit">
             <CreateHabit />
-          </main>
-        </Route>
-        <Route path="/">
-          <main>
+          </Route>
+          <Route path="/">
             <AddHabit link={'/create-habit'} />
-          </main>
-        </Route>
+          </Route>
+        </main>
       </Switch>
     </Router>
   );
