@@ -3,6 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateHabit from './pages/CreateHabit/CreateHabit';
 import AddHabit from './components/AddHabit/AddHabit';
 
+export type Habit = {
+  id: string;
+  name: string;
+  color: string;
+  dateCreated: number;
+  datesCompleted: string[];
+  rating: string;
+};
+
 function App(): JSX.Element {
   return (
     <Router>

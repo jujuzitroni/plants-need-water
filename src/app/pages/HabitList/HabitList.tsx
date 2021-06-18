@@ -3,15 +3,7 @@ import PlusIcon from '../../components/Icons/PlusIcon';
 import PageLink from '../../components/PageLink/PageLink';
 import SwipeDate from '../../components/SwipeDate/SwipeDate';
 import styles from './HabitList.module.css';
-
-export type Habit = {
-  id: string;
-  name: string;
-  color: string;
-  dateCreated: number;
-  datesCompleted: string[];
-  rating: string;
-};
+import { Habit } from '../../App';
 
 function toListElement(habit: Habit): JSX.Element {
   return (

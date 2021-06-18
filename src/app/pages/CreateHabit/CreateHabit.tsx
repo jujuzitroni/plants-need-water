@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button';
 import ColorSelector from '../../components/ColorSelector/ColorSelector';
 import HabitInput from '../../components/HabitInput/HabitInput';
 import styles from './CreateHabit.module.css';
-import { Habit } from '../HabitList/HabitList';
+import { Habit } from '../../App';
 import { v4 as uuidv4 } from 'uuid';
 
 function addHabit(name: string, color: string): Habit {
