@@ -7,15 +7,21 @@ import styles from './CreateHabit.module.css';
 
 function CreateHabit(): JSX.Element {
   const [color, selectColor] = useState('red');
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    console.log(color);
+  }
+
   return (
     <div className={styles.createPage}>
       <header>
         <BackButton />
       </header>
-      <form>
+      <form onSubmit={handleSubmit}>
         <HabitInput />
         <ColorSelector onSelectColor={selectColor} />
-        <Button variant="submit" onSubmit={() => console.log('submitted')} />
+        <Button variant="submit" />
       </form>
     </div>
   );
