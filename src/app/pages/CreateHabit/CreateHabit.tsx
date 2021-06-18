@@ -7,6 +7,10 @@ import styles from './CreateHabit.module.css';
 import { Habit } from '../../App';
 import { v4 as uuidv4 } from 'uuid';
 
+type CreateHabitProps = {
+  setHabitList: (habit: Habit) => void;
+};
+
 function addHabit(name: string, color: string): Habit {
   return {
     id: uuidv4(),
@@ -18,7 +22,7 @@ function addHabit(name: string, color: string): Habit {
   };
 }
 
-function CreateHabit(): JSX.Element {
+function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
   const [color, selectColor] = useState('red');
   const [name, setName] = useState('');
 
@@ -26,6 +30,7 @@ function CreateHabit(): JSX.Element {
     event.preventDefault();
     const habit = addHabit(name, color);
     console.log(habit);
+    setHabitList(habit);
   }
 
   return (

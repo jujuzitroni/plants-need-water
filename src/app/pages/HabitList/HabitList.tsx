@@ -5,6 +5,10 @@ import SwipeDate from '../../components/SwipeDate/SwipeDate';
 import styles from './HabitList.module.css';
 import { Habit } from '../../App';
 
+type HabitListProps = {
+  habits: Habit[];
+};
+
 function toListElement(habit: Habit): JSX.Element {
   return (
     <li key={habit.id}>
@@ -17,34 +21,7 @@ function toListElement(habit: Habit): JSX.Element {
   );
 }
 
-function HabitList(): JSX.Element {
-  const habits: Habit[] = [
-    {
-      id: '1',
-      name: 'take a break',
-      color: 'hotpink',
-      dateCreated: 0,
-      datesCompleted: [],
-      rating: 'nice',
-    },
-    {
-      id: '2',
-      name: 'take a break',
-      color: 'hotpink',
-      dateCreated: 2,
-      datesCompleted: [],
-      rating: 'nice',
-    },
-    {
-      id: '3',
-      name: 'take a break',
-      color: 'hotpink',
-      dateCreated: 5,
-      datesCompleted: [],
-      rating: 'nice',
-    },
-  ];
-
+function HabitList({ habits }: HabitListProps): JSX.Element {
   return (
     <div className={styles.container}>
       <header>
