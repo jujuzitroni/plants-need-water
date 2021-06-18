@@ -1,27 +1,21 @@
 import React from 'react';
-import styles from './App.module.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import PageNav from './components/PageNav/PageNav';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreateHabit from './pages/CreateHabit/CreateHabit';
+import AddHabit from './components/AddHabit/AddHabit';
 
 function App(): JSX.Element {
   return (
     <Router>
-      <div className={styles.App}>
-        <header>
-          <PageNav />
-        </header>
-        <Switch>
-          <Route path="/about">
-            <main>
-              About
-              <p>Hello Vite + React!</p>
-            </main>
+      <Switch>
+        <main>
+          <Route path="/create-habit">
+            <CreateHabit />
           </Route>
-          <Route path="/home">
-            <main>Home</main>
+          <Route path="/">
+            <AddHabit link={'/create-habit'} />
           </Route>
-        </Switch>
-      </div>
+        </main>
+      </Switch>
     </Router>
   );
 }

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styles from './Button.module.css';
 
 type ButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
   children?: ReactNode;
   variant: 'submit' | 'delete';
 };

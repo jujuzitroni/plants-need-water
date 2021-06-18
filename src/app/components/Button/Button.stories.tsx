@@ -8,14 +8,7 @@ export default {
 };
 
 export const SubmitButton = (): JSX.Element => (
-  <Button
-    variant="submit"
-    onClick={() => {
-      console.log('clicked');
-    }}
-  >
-    Add new habit
-  </Button>
+  <Button variant="submit">Add new habit</Button>
 );
 
 export const DeleteButton = (): JSX.Element => (
