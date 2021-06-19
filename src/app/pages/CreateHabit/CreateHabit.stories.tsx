@@ -6,4 +6,6 @@ export default {
   page: CreateHabit,
 };
 
-export const CreateNewHabit = (): JSX.Element => <CreateHabit />;
+export const CreateNewHabit = (): JSX.Element => (
+  <CreateHabit setHabitList={console.log} />
+);
