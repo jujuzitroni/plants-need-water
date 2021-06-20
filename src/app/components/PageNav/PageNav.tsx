@@ -7,7 +7,7 @@ function getActiveClass(pathname: string): string | undefined {
   if (location.pathname === pathname) {
     return styles.tabs__active;
   }
-  return;
+  return styles.tabs__inactive;
 }
 
 function PageNav(): JSX.Element {
