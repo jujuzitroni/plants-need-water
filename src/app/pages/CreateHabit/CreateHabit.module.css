@@ -1,4 +1,10 @@
 .createPage {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  gap: 7em;
+}
+
+.createPage__form {
+  display: grid;
+  gap: 1em;
+  grid-template-rows: repeat(3, auto);
 }
