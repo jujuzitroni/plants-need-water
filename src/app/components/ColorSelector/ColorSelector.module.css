@@ -1,0 +1,35 @@
+.colorSelector {
+  display: grid;
+  gap: 0.5em;
+}
+
+.colorSelector__dropdown {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  padding: 0;
+}
+
+.colorSelector__dropdown li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+}
+
+.colorDot {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.colorSelector__selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 0.25em;
+  border: 1px solid #707070;
+}
