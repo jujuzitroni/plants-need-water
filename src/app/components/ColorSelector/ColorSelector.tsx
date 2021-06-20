@@ -28,26 +28,38 @@ function ColorSelector({
   selectedColor,
   onSelectColor,
 }: ColorSelectorProps): JSX.Element {
+  const [isListOpen, setListOpen] = useState(false);
+
   return (
     <>
       <h2>choose color</h2>
-      <div className={styles.colorSelector__selected}>
+      <div
+        className={styles.colorSelector__selected}
+        onClick={() => {
+          setListOpen(!isListOpen);
+        }}
+      >
         <div
           className={styles.colorDot}
           style={{ backgroundColor: selectedColor }}
         />
       </div>
-      <ul className={styles.colorSelector__dropdown}>
-        {colors.map((color) => (
-          <li key={color}>
-            <div
-              className={styles.colorDot}
-              style={{ backgroundColor: color }}
-              onClick={() => onSelectColor(color)}
-            />
-          </li>
-        ))}
-      </ul>
+      {isListOpen && (
+        <ul className={styles.colorSelector__dropdown}>
+          {colors.map((color) => (
+            <li key={color}>
+              <div
+                className={styles.colorDot}
+                style={{ backgroundColor: color }}
+                onClick={() => {
+                  onSelectColor(color);
+                  setListOpen(false);
+                }}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
