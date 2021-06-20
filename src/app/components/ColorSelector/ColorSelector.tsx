@@ -16,28 +16,39 @@ const colors = [
   '#CADCDC',
   '#FA5735',
   '#2F96FA',
+  '#45C349',
 ];
 
 type ColorSelectorProps = {
+  selectedColor: string;
   onSelectColor: (color: string) => void;
 };
 
-function ColorSelector({ onSelectColor }: ColorSelectorProps): JSX.Element {
+function ColorSelector({
+  selectedColor,
+  onSelectColor,
+}: ColorSelectorProps): JSX.Element {
   return (
-    <label className={styles.colorSelector}>
-      <span>choose color</span>
-      <select
-        className={styles.colorSelector__dropdown}
-        name="colorSelector"
-        onChange={(event) => onSelectColor(event.target.value)}
-      >
+    <>
+      <h2>choose color</h2>
+      <div className={styles.colorSelector__selected}>
+        <div
+          className={styles.colorDot}
+          style={{ backgroundColor: selectedColor }}
+        />
+      </div>
+      <ul className={styles.colorSelector__dropdown}>
         {colors.map((color) => (
-          <option key={color} value={color}>
-            {color}
-          </option>
+          <li key={color}>
+            <div
+              className={styles.colorDot}
+              style={{ backgroundColor: color }}
+              onClick={() => onSelectColor(color)}
+            />
+          </li>
         ))}
-      </select>
-    </label>
+      </ul>
+    </>
   );
 }
 
