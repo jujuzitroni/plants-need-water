@@ -6,6 +6,12 @@ export default {
   component: ColorSelector,
 };
 
+let selectedColor = 'blue';
+
+function changeColor(color: string) {
+  selectedColor = color;
+}
+
 export const Selector = (): JSX.Element => (
-  <ColorSelector onSelectColor={console.log} />
+  <ColorSelector selectedColor={selectedColor} onSelectColor={changeColor} />
 );
