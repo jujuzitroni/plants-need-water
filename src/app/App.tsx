@@ -27,7 +27,7 @@ function App(): JSX.Element {
           <Route path="/create-habit">
             <CreateHabit setHabitList={setHabitList} />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <HabitList habits={habits} />
           </Route>
         </main>
