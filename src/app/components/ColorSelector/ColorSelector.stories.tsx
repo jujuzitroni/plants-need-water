@@ -6,12 +6,6 @@ export default {
   component: ColorSelector,
 };
 
-let selectedColor = 'blue';
-
-function changeColor(color: string) {
-  selectedColor = color;
-}
-
 export const Selector = (): JSX.Element => {
   const [selectedColor, setSelectedColor] = useState('blue');
   return (
