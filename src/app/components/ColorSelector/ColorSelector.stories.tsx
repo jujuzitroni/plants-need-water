@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ColorSelector from './ColorSelector';
 
 export default {
@@ -6,6 +6,12 @@ export default {
   component: ColorSelector,
 };
 
-export const Selector = (): JSX.Element => (
-  <ColorSelector onSelectColor={console.log} />
-);
+export const Selector = (): JSX.Element => {
+  const [selectedColor, setSelectedColor] = useState('blue');
+  return (
+    <ColorSelector
+      selectedColor={selectedColor}
+      onSelectColor={setSelectedColor}
+    />
+  );
+};

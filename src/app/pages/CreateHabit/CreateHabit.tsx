@@ -6,6 +6,7 @@ import HabitInput from '../../components/HabitInput/HabitInput';
 import styles from './CreateHabit.module.css';
 import { Habit } from '../../App';
 import { v4 as uuidv4 } from 'uuid';
+import { colors } from '../../config';
 
 type CreateHabitProps = {
   setHabitList: (habit: Habit) => void;
@@ -23,8 +24,9 @@ function addHabit(name: string, color: string): Habit {
 }
 
 function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
-  const [color, selectColor] = useState('red');
+  const [color, selectColor] = useState(colors[0]);
   const [name, setName] = useState('');
+
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

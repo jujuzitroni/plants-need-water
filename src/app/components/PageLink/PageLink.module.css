@@ -1,8 +1,9 @@
 .addNew {
   background-color: var(--main-font-color);
   color: var(--secondary-font-color);
-  padding: 1em 5em;
+  padding: 0.6em 1em;
   border-radius: 0.25em;
+  text-align: center;
 }
 
 .addNew:active {
