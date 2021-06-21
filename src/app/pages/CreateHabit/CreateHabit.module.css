@@ -1,10 +1,18 @@
 .createPage {
   display: grid;
-  gap: 7em;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
 }
 
 .createPage__form {
-  display: grid;
-  gap: 1em;
-  grid-template-rows: repeat(3, auto);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.createPage__inputs {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
 }
