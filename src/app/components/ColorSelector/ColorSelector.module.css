@@ -25,14 +25,13 @@
   display: grid;
   grid-template-columns: repeat(5, auto);
   padding: 0;
+  grid-row-gap: 1em;
 }
 
 .colorSelector__dropdown li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3em;
-  height: 3em;
+  width: 1.5em;
+  height: 1.5em;
+  justify-self: center;
 }
 
 .colorSelector__dots {

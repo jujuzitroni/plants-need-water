@@ -30,16 +30,15 @@ function ColorSelector({
       {isListOpen && (
         <ul className={styles.colorSelector__dropdown}>
           {colors.map((color) => (
-            <li key={color}>
-              <div
-                className={styles.colorSelector__dots}
-                style={{ backgroundColor: color }}
-                onClick={() => {
-                  onSelectColor(color);
-                  setListOpen(false);
-                }}
-              />
-            </li>
+            <li
+              key={color}
+              className={styles.colorSelector__dots}
+              style={{ backgroundColor: color }}
+              onClick={() => {
+                onSelectColor(color);
+                setListOpen(false);
+              }}
+            />
           ))}
         </ul>
       )}
