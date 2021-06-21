@@ -11,8 +11,10 @@
 
 .about {
   background-color: var(--main-color);
-  padding: 1em 5em;
+  padding: 0.6em 1em;
   border-radius: 0.25em;
+  width: 100%;
+  text-align: center;
 }
 
 .about:active {
@@ -25,6 +27,9 @@
   border-radius: 50%;
   display: inline-grid;
   place-items: center;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
 }
 
 .plus:active {
