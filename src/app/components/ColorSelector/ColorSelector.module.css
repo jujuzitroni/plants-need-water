@@ -9,7 +9,7 @@
   font-weight: 500;
 }
 
-.colorSelector__selected {
+.colorSelector__select {
   display: flex;
   align-items: center;
   justify-content: center;

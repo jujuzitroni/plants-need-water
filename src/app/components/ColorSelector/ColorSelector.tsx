@@ -17,7 +17,7 @@ function ColorSelector({
     <div className={styles.colorSelector}>
       <h2>choose color</h2>
       <div
-        className={styles.colorSelector__selected}
+        className={styles.colorSelector__select}
         onClick={() => {
           setListOpen(!isListOpen);
         }}
