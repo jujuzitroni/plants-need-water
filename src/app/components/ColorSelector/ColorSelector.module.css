@@ -3,6 +3,12 @@
   gap: 0.5em;
 }
 
+.colorSelector h2 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 500;
+}
+
 .colorSelector__selected {
   display: flex;
   align-items: center;

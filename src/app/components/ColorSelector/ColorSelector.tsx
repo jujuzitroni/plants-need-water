@@ -14,7 +14,7 @@ function ColorSelector({
   const [isListOpen, setListOpen] = useState(false);
 
   return (
-    <>
+    <div className={styles.colorSelector}>
       <h2>choose color</h2>
       <div
         className={styles.colorSelector__selected}
@@ -43,7 +43,7 @@ function ColorSelector({
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 }
 
