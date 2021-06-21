@@ -27,7 +27,6 @@ function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
   const [color, selectColor] = useState(colors[0]);
   const [name, setName] = useState('');
 
-
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const habit = addHabit(name, color);
@@ -43,7 +42,7 @@ function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
       <form className={styles.createPage__form} onSubmit={handleSubmit}>
         <div className={styles.createPage__inputs}>
           <HabitInput onNameChange={setName} />
-          <ColorSelector onSelectColor={selectColor} />
+          <ColorSelector selectedColor={color} onSelectColor={selectColor} />
         </div>
         <Button variant="submit">
           <p>add new habit</p>
