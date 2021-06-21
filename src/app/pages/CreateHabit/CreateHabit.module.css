@@ -4,10 +4,15 @@
   height: 100vh;
 }
 
+.createPage__header {
+  padding: 0.5em;
+}
+
 .createPage__form {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 0 2em 3em 2em;
 }
 
 .createPage__inputs {

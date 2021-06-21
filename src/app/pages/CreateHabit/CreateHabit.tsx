@@ -35,7 +35,7 @@ function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
 
   return (
     <div className={styles.createPage}>
-      <header>
+      <header className={styles.createPage__header}>
         <BackButton />
       </header>
       <form className={styles.createPage__form} onSubmit={handleSubmit}>
