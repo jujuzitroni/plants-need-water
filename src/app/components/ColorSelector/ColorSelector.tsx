@@ -23,7 +23,7 @@ function ColorSelector({
         }}
       >
         <div
-          className={styles.colorDot}
+          className={styles.colorSelector__dots}
           style={{ backgroundColor: selectedColor }}
         />
       </div>
@@ -32,7 +32,7 @@ function ColorSelector({
           {colors.map((color) => (
             <li key={color}>
               <div
-                className={styles.colorDot}
+                className={styles.colorSelector__dots}
                 style={{ backgroundColor: color }}
                 onClick={() => {
                   onSelectColor(color);
