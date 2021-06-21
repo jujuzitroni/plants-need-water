@@ -16,7 +16,7 @@ function ColorSelector({
   return (
     <div className={styles.colorSelector}>
       <h2>choose color</h2>
-      <div
+      <button
         className={styles.colorSelector__select}
         onClick={() => {
           setListOpen(!isListOpen);
@@ -26,7 +26,7 @@ function ColorSelector({
           className={styles.colorSelector__dots}
           style={{ backgroundColor: selectedColor }}
         />
-      </div>
+      </button>
       {isListOpen && (
         <ul className={styles.colorSelector__dropdown}>
           {colors.map((color) => (
