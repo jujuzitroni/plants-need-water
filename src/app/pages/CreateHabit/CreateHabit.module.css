@@ -1,4 +1,23 @@
 .createPage {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.createPage__header {
+  padding: 0.5em;
+}
+
+.createPage__form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 2em 3em 2em;
+}
+
+.createPage__inputs {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -4,9 +4,24 @@
   grid-template-rows: auto 1fr auto;
 }
 
+.main {
+  position: relative;
+}
+
 .footer {
+  display: flex;
   background-color: var(--secondary-color);
-  height: 5em;
+  height: 8em;
+  padding: 1em;
+  align-items: flex-end;
+}
+
+.habitList {
+  display: grid;
+  grid-row-gap: 0.5em;
+  grid-auto-rows: 4em;
+  padding: 0;
+  margin: 0;
 }
 
 .habitColor {

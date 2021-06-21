@@ -6,4 +6,6 @@ export default {
   component: HabitInput,
 };
 
-export const InputField = (): JSX.Element => <HabitInput />;
+export const InputField = (): JSX.Element => (
+  <HabitInput onNameChange={console.log} />
+);

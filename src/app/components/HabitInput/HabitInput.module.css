@@ -2,6 +2,7 @@
   display: grid;
   gap: 0.5em;
   font: var(--main-font);
+  margin-bottom: 1em;
 }
 
 .input {
