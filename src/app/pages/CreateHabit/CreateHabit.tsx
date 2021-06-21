@@ -4,9 +4,10 @@ import Button from '../../components/Button/Button';
 import ColorSelector from '../../components/ColorSelector/ColorSelector';
 import HabitInput from '../../components/HabitInput/HabitInput';
 import styles from './CreateHabit.module.css';
+import { colors } from '../../config';
 
 function CreateHabit(): JSX.Element {
-  const [color, selectColor] = useState('red');
+  const [color, selectColor] = useState(colors[0]);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -20,7 +21,7 @@ function CreateHabit(): JSX.Element {
       </header>
       <form onSubmit={handleSubmit}>
         <HabitInput />
-        <ColorSelector onSelectColor={selectColor} />
+        <ColorSelector selectedColor={color} onSelectColor={selectColor} />
         <Button variant="submit" />
       </form>
     </div>
