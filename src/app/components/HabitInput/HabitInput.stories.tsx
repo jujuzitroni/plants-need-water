@@ -7,5 +7,5 @@ export default {
 };
 
 export const InputField = (): JSX.Element => (
-  <HabitInput onNameChange={console.log} />
+  <HabitInput value="" onNameChange={console.log} />
 );
