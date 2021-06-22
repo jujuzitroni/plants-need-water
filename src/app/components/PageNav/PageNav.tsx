@@ -13,10 +13,10 @@ function getActiveClass(pathname: string): string | undefined {
 function PageNav(): JSX.Element {
   return (
     <nav className={styles.tabs}>
-      <Link className={getActiveClass('/home')} to="/home">
+      <Link className={getActiveClass('/')} to="/">
         today
       </Link>
-      <Link className={getActiveClass('/about')} to="/about">
+      <Link className={getActiveClass('/calendar')} to="/calendar">
         calendar
       </Link>
     </nav>
