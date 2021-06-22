@@ -29,12 +29,12 @@ function CreateHabit({ onHabitListChange }: CreateHabitProps): JSX.Element {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     const habit = addHabit(name, color);
-    console.log(habit);
     onHabitListChange(habit);
+
     setName('');
     selectColor(colors[0]);
-    alert('Habit added! :)');
   }
 
   return (
