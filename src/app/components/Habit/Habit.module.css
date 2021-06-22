@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--main-font-color);
+  background-color: var(--secondary-color);
+  border-radius: 0.25em;
+}
+
+.checkbox {
+  background-color: var(--main-color);
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+
+.content {
+  display: flex;
+}
+
+.plantCard {
+  width: 3em;
+  height: 3em;
+  background-color: hotpink;
+}
