@@ -24,8 +24,11 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, auto);
-  padding: 0;
   grid-row-gap: 1em;
+  border: 1px solid #707070;
+  border-radius: 0.25em;
+  padding: 1em 0;
+  margin: 0;
 }
 
 .colorSelector__dropdown li {

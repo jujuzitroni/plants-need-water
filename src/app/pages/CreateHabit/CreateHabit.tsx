@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { colors } from '../../config';
 
 type CreateHabitProps = {
-  setHabitList: (habit: Habit) => void;
+  onHabitListChange: (habit: Habit) => void;
 };
 
 function addHabit(name: string, color: string): Habit {
@@ -23,15 +23,18 @@ function addHabit(name: string, color: string): Habit {
   };
 }
 
-function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
+function CreateHabit({ onHabitListChange }: CreateHabitProps): JSX.Element {
   const [color, selectColor] = useState(colors[0]);
   const [name, setName] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     const habit = addHabit(name, color);
-    console.log(habit);
-    setHabitList(habit);
+    onHabitListChange(habit);
+
+    setName('');
+    selectColor(colors[0]);
   }
 
   return (
@@ -41,7 +44,7 @@ function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
       </header>
       <form className={styles.createPage__form} onSubmit={handleSubmit}>
         <div className={styles.createPage__inputs}>
-          <HabitInput onNameChange={setName} />
+          <HabitInput value={name} onNameChange={setName} />
           <ColorSelector selectedColor={color} onSelectColor={selectColor} />
         </div>
         <Button variant="submit">
