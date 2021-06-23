@@ -1,6 +1,8 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
   color: var(--main-font-color);
   background-color: var(--secondary-color);
   border-radius: 0.25em;
@@ -9,6 +11,8 @@
 .checkbox {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-self: stretch;
   background-color: var(--main-color);
   border-top-left-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
@@ -30,11 +34,6 @@
 
 .checkbox__input:checked + label {
   background-color: tomato;
-}
-
-.content {
-  display: flex;
-  align-items: stretch;
 }
 
 .plantCard {
