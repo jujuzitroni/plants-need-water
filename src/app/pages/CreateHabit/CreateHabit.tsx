@@ -41,7 +41,7 @@ function CreateHabit({ setHabitList }: CreateHabitProps): JSX.Element {
       </header>
       <form className={styles.createPage__form} onSubmit={handleSubmit}>
         <div className={styles.createPage__inputs}>
-          <HabitInput onNameChange={setName} />
+          <HabitInput value={name} onNameChange={setName} />
           <ColorSelector selectedColor={color} onSelectColor={selectColor} />
         </div>
         <Button variant="submit">
