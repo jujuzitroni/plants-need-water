@@ -7,7 +7,12 @@ function HabitItem(): JSX.Element {
     <article className={styles.container}>
       <div className={styles.content}>
         <div className={styles.checkbox}>
-          <input type="checkbox" />
+          <input
+            className={styles.checkbox__input}
+            id="checkbox"
+            type="checkbox"
+          />
+          <label htmlFor="checkbox" />
         </div>
         <span>this is a habit</span>
       </div>

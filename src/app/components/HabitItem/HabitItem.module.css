@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   color: var(--main-font-color);
   background-color: var(--secondary-color);
@@ -8,17 +7,40 @@
 }
 
 .checkbox {
+  display: flex;
+  justify-content: center;
   background-color: var(--main-color);
   border-top-left-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
+  width: 4em;
+}
+
+.checkbox__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox__input + label {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  border: 1px solid #707070;
+  background-color: var(--secondary-font-color);
+}
+
+.checkbox__input:checked + label {
+  background-color: tomato;
 }
 
 .content {
   display: flex;
+  align-items: stretch;
 }
 
 .plantCard {
-  width: 3em;
-  height: 3em;
+  width: auto;
+  padding: 0.2em;
   background-color: hotpink;
+  border-bottom-right-radius: 0.25em;
+  border-top-right-radius: 0.25em;
 }
