@@ -7,5 +7,5 @@ export default {
 };
 
 export const CreateNewHabit = (): JSX.Element => (
-  <CreateHabit setHabitList={console.log} />
+  <CreateHabit onHabitListChange={console.log} />
 );

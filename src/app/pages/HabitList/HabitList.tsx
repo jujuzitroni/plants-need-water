@@ -5,6 +5,7 @@ import SwipeDate from '../../components/SwipeDate/SwipeDate';
 import styles from './HabitList.module.css';
 import { Habit } from '../../App';
 import PageNav from '../../components/PageNav/PageNav';
+import HabitListPlaceholder from '../../components/HabitListPlaceholder/HabitListPlaceholder';
 
 type HabitListProps = {
   habits: Habit[];
@@ -30,7 +31,12 @@ function HabitList({ habits }: HabitListProps): JSX.Element {
       </header>
       <main className={styles.main}>
         <SwipeDate />
-        <ul className={styles.habitList}>{habits.map(toListElement)}</ul>
+
+        {habits.length ? (
+          <ul className={styles.habitList}>{habits.map(toListElement)}</ul>
+        ) : (
+          <HabitListPlaceholder />
+        )}
 
         <PageLink variant="plus" link="/create-habit">
           <PlusIcon />

@@ -26,7 +26,7 @@ function App(): JSX.Element {
       <Switch>
         <main>
           <Route path="/create-habit">
-            <CreateHabit setHabitList={setHabitList} />
+            <CreateHabit onHabitListChange={setHabitList} />
           </Route>
           <Route exact path="/">
             <HabitList habits={habits} />
