@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './Habit.module.css';
+import styles from './HabitItem.module.css';
+import plant_bloom from '../../assets/plant_bloom.png';
 
-function Habit(): JSX.Element {
+function HabitItem(): JSX.Element {
   return (
     <article className={styles.container}>
       <div className={styles.content}>
@@ -10,9 +11,11 @@ function Habit(): JSX.Element {
         </div>
         <span>this is a habit</span>
       </div>
-      <div className={styles.plantCard}></div>
+      <div className={styles.plantCard}>
+        <img src={plant_bloom} alt="" />
+      </div>
     </article>
   );
 }
 
-export default Habit;
+export default HabitItem;
