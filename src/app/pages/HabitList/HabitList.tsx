@@ -12,9 +12,10 @@ import { getDateString } from '../../utils';
 
 type HabitListProps = {
   habits: Habit[];
+  setHabits: (habits: Habit[]) => void;
 };
 
-function HabitList({ habits }: HabitListProps): JSX.Element {
+function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
   const date = new Date();
   const dateString = getDateString(date);
 
@@ -27,11 +28,14 @@ function HabitList({ habits }: HabitListProps): JSX.Element {
           (item) => item !== dateString
         );
       }
+      setHabits([...habits]);
     }
 
     return (
       <li key={habit.id}>
         <HabitItem
+          id={habit.id}
+          checked={habit.datesCompleted.includes(dateString)}
           name={habit.name}
           color={habit.color}
           onHabitCheck={onHabitCheck}
