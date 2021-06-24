@@ -2,18 +2,16 @@ import React from 'react';
 import plant_fresh from '../../assets/plant_fresh.png';
 import plant_coming_along from '../../assets/plant_coming_along.png';
 import plant_bloom from '../../assets/plant_bloom.png';
-import plant_sad from '../../assets/plant_sad.png';
+import empty_pot from '../../assets/empty_pot.png';
 
 type HabitPlantProps = {
   rating: number;
 };
 
-// note: the newlyPlanted plant is a placeholder for now
-
 function getHabitRating(rating: number) {
   if (rating === 0) {
     return {
-      imgSrc: plant_sad,
+      imgSrc: empty_pot,
       alt: 'empty flower pot',
     };
   }
@@ -23,7 +21,7 @@ function getHabitRating(rating: number) {
       alt: 'small plant in a pot',
     };
   }
-  if (rating <= 20) {
+  if (rating <= 30) {
     return {
       imgSrc: plant_coming_along,
       alt: 'a grown plant in a pot',

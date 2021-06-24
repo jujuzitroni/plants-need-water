@@ -6,8 +6,6 @@ export default {
   component: HabitPlant,
 };
 
-// note: the newlyPlanted plant is a placeholder for now
-
 export const NewlyPlanted = (): JSX.Element => <HabitPlant rating={0} />;
 
 export const FreshPlant = (): JSX.Element => <HabitPlant rating={10} />;
