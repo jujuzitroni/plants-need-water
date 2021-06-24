@@ -2,7 +2,19 @@ import React from 'react';
 import styles from './HabitItem.module.css';
 import plant_bloom from '../../assets/plant_bloom.png';
 
-function HabitItem(): JSX.Element {
+type HabitItemProps = {
+  children: React.ReactNode;
+  name: string;
+  color: string;
+  onHabitCheck: () => void;
+};
+
+function HabitItem({
+  children,
+  onHabitCheck,
+  color,
+  name,
+}: HabitItemProps): JSX.Element {
   return (
     <article className={styles.container}>
       <div className={styles.checkbox}>
@@ -10,12 +22,13 @@ function HabitItem(): JSX.Element {
           className={styles.checkbox__input}
           id="checkbox"
           type="checkbox"
+          onChange={() => onHabitCheck()}
         />
         <label htmlFor="checkbox" />
       </div>
-      <span>this is a habit with longer text even loooonger</span>
-      <div className={styles.plantCard}>
-        <img src={plant_bloom} alt="" />
+      <span>{name}</span>
+      <div className={styles.plantCard} style={{ backgroundColor: color }}>
+        {children}
       </div>
     </article>
   );
