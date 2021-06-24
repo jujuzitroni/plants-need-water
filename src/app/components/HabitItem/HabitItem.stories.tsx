@@ -8,7 +8,13 @@ export default {
 };
 
 export const Habit = (): JSX.Element => (
-  <HabitItem name="eat more cake" color="#FFD9B2" onHabitCheck={console.log}>
+  <HabitItem
+    checked={true}
+    id="123"
+    name="eat more cake"
+    color="#FFD9B2"
+    onHabitCheck={console.log}
+  >
     <HabitPlant rating={20} />
   </HabitItem>
 );
