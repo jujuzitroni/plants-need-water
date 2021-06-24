@@ -26,7 +26,6 @@ function HabitList({ habits }: HabitListProps): JSX.Element {
           (item) => item !== dateString
         );
       }
-      console.log(habit);
     }
 
     return (
