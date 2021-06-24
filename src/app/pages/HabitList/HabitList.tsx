@@ -7,6 +7,7 @@ import { Habit } from '../../App';
 import PageNav from '../../components/PageNav/PageNav';
 import HabitListPlaceholder from '../../components/HabitListPlaceholder/HabitListPlaceholder';
 import HabitItem from '../../components/HabitItem/HabitItem';
+import HabitPlant from '../../components/HabitPlant/HabitPlant';
 
 type HabitListProps = {
   habits: Habit[];
@@ -35,7 +36,7 @@ function HabitList({ habits }: HabitListProps): JSX.Element {
           color={habit.color}
           onHabitCheck={onHabitCheck}
         >
-          {/* {getPlantImage()} */}
+          <HabitPlant rating={habit.datesCompleted.length} />
         </HabitItem>
       </li>
     );

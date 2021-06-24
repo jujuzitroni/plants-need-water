@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './HabitItem.module.css';
-import plant_bloom from '../../assets/plant_bloom.png';
 
 type HabitItemProps = {
   children: React.ReactNode;
