@@ -19,7 +19,7 @@
 
 .habitList {
   display: grid;
-  grid-row-gap: 0.5em;
+  grid-row-gap: 1em;
   grid-auto-rows: 4em;
   padding: 0;
   margin: 0;
