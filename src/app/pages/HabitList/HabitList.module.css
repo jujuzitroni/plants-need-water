@@ -23,8 +23,5 @@
   grid-auto-rows: 4em;
   padding: 0;
   margin: 0;
-}
-
-.habitColor {
-  height: 2em;
+  list-style: none;
 }
