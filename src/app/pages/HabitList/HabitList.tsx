@@ -8,6 +8,7 @@ import PageNav from '../../components/PageNav/PageNav';
 import HabitListPlaceholder from '../../components/HabitListPlaceholder/HabitListPlaceholder';
 import HabitItem from '../../components/HabitItem/HabitItem';
 import HabitPlant from '../../components/HabitPlant/HabitPlant';
+import { getDateString } from '../../utils';
 
 type HabitListProps = {
   habits: Habit[];
@@ -15,7 +16,7 @@ type HabitListProps = {
 
 function HabitList({ habits }: HabitListProps): JSX.Element {
   const date = new Date();
-  const dateString = date.toISOString();
+  const dateString = getDateString(date);
 
   function toListElement(habit: Habit): JSX.Element {
     function onHabitCheck() {
