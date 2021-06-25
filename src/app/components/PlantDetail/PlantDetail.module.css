@@ -1,0 +1,10 @@
+.plantCard {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  background-color: var(--secondary-color);
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  padding: 3em;
+  border-bottom: 8px solid darkred;
+}
