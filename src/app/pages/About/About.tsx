@@ -4,12 +4,12 @@ import styles from './About.module.css';
 
 function About(): JSX.Element {
   return (
-    <div className={styles.AboutPage}>
+    <div className={styles.aboutPage}>
       <header>
         <BackButton />
       </header>
-      <main>
-        <h1 className={styles.aboutHeadline}>about plants need water</h1>
+      <main className={styles.aboutHeadline}>
+        <h1>about plants need water</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
           dolores beatae? Culpa ratione sapiente voluptatum explicabo

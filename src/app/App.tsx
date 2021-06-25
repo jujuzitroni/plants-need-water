@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './pages/About/About';
 import Calendar from './pages/Calendar/Calendar';
 import CreateHabit from './pages/CreateHabit/CreateHabit';
 import HabitList from './pages/HabitList/HabitList';
@@ -33,6 +34,9 @@ function App(): JSX.Element {
           </Route>
           <Route path="/calendar">
             <Calendar />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
         </main>
       </Switch>
