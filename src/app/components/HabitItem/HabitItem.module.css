@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--main-font-color);
+  background-color: var(--secondary-color);
+  border-radius: 0.25em;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--main-color);
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  width: 4em;
+}
+
+.checkbox__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox__input + label {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  border: 1px solid #707070;
+  background-color: var(--secondary-font-color);
+  position: relative;
+}
+
+.checkbox__input + label::after {
+  content: '✓';
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.checkbox__input:checked + label::after {
+  opacity: 1;
+}
+
+.plantCard {
+  width: auto;
+  padding: 0.2em;
+  border-bottom-right-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}

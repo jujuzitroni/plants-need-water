@@ -6,4 +6,6 @@ export default {
   component: HabitList,
 };
 
-export const HabitListPage = (): JSX.Element => <HabitList habits={[]} />;
+export const HabitListPage = (): JSX.Element => (
+  <HabitList setHabits={() => console.log} habits={[]} />
+);

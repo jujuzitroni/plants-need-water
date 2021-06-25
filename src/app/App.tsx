@@ -29,7 +29,7 @@ function App(): JSX.Element {
             <CreateHabit onHabitListChange={setHabitList} />
           </Route>
           <Route exact path="/">
-            <HabitList habits={habits} />
+            <HabitList habits={habits} setHabits={setHabits} />
           </Route>
           <Route path="/calendar">
             <Calendar />
