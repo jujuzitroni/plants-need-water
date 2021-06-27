@@ -65,7 +65,7 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
         </PageLink>
       </main>
       <footer className={styles.footer}>
-        <PageLink variant="about" link="">
+        <PageLink variant="about" link="/about">
           <span>about plants need water</span>
         </PageLink>
       </footer>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './HabitItem.module.css';
 
 type HabitItemProps = {
@@ -30,10 +31,12 @@ function HabitItem({
         />
         <label htmlFor={id} />
       </div>
-      <span>{name}</span>
-      <div className={styles.plantCard} style={{ backgroundColor: color }}>
-        {children}
-      </div>
+      <Link className={styles.itemContent} to="/detail">
+        <span>{name}</span>
+        <div className={styles.plantCard} style={{ backgroundColor: color }}>
+          {children}
+        </div>
+      </Link>
     </article>
   );
 }

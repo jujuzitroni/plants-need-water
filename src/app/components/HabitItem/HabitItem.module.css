@@ -47,6 +47,13 @@
   opacity: 1;
 }
 
+.itemContent {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: 100%;
+}
+
 .plantCard {
   width: auto;
   padding: 0.2em;
