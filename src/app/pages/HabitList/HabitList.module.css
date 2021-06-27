@@ -7,6 +7,9 @@
 .main {
   position: relative;
   padding: 1.5em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer {
