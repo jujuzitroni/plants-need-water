@@ -31,7 +31,7 @@ function HabitItem({
         />
         <label htmlFor={id} />
       </div>
-      <Link className={styles.itemContent} to="/detail">
+      <Link className={styles.itemContent} to={`/detail/${id}`}>
         <span>{name}</span>
         <div className={styles.plantCard} style={{ backgroundColor: color }}>
           {children}

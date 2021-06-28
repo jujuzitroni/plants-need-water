@@ -39,8 +39,8 @@ function App(): JSX.Element {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/detail">
-            <HabitDetail />
+          <Route path="/detail/:id">
+            <HabitDetail habits={habits} />
           </Route>
         </main>
       </Switch>
