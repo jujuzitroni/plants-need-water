@@ -6,4 +6,6 @@ export default {
   component: PlantDetail,
 };
 
-export const plantCard = (): JSX.Element => <PlantDetail />;
+export const plantCard = (): JSX.Element => (
+  <PlantDetail rating="coming_along" color="#CADCDC" />
+);
