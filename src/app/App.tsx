@@ -35,9 +35,9 @@ function App(): JSX.Element {
           </Route>
           <Route path="/create-habit">
             <CreateHabit onHabitListChange={setHabitList} />
-            <Route path="/about">
-              <About />
-            </Route>
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route path="/detail">
             <HabitDetail />
