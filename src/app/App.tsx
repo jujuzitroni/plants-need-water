@@ -40,7 +40,7 @@ function App(): JSX.Element {
             </Route>
           </Route>
           <Route path="/detail">
-            <HabitDetail habits={habits} />
+            <HabitDetail />
           </Route>
         </main>
       </Switch>
