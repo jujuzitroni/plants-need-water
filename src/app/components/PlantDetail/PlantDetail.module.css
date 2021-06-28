@@ -1,7 +1,5 @@
 .plantCard {
   display: grid;
-
-  /* justify-content: center; */
   justify-items: center;
   background-color: var(--secondary-color);
   border-top-left-radius: 0.25em;
