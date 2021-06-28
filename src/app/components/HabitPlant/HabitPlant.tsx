@@ -3,25 +3,26 @@ import plant_fresh from '../../assets/plant_fresh.png';
 import plant_coming_along from '../../assets/plant_coming_along.png';
 import plant_bloom from '../../assets/plant_bloom.png';
 import empty_pot from '../../assets/empty_pot.png';
+import { RATING, Rating } from '../../config';
 
 type HabitPlantProps = {
-  rating: string;
+  rating: Rating;
 };
 
-function getImgSrc(rating: string) {
-  if (rating === 'empty_pot') {
+function getImgSrc(rating: Rating) {
+  if (rating === RATING.new) {
     return {
       imgSrc: empty_pot,
       alt: 'empty flower pot',
     };
   }
-  if (rating === 'fresh_plant') {
+  if (rating === RATING.beginner) {
     return {
       imgSrc: plant_fresh,
       alt: 'small plant in a pot',
     };
   }
-  if (rating === 'coming_along') {
+  if (rating === RATING.intermediate) {
     return {
       imgSrc: plant_coming_along,
       alt: 'a grown plant in a pot',

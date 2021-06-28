@@ -1,20 +1,21 @@
 import React from 'react';
 import styles from './PlantDetail.module.css';
 import HabitPlant from '../HabitPlant/HabitPlant';
+import { Rating, RATING } from '../../config';
 
 type PlantDetailProps = {
-  rating: string;
+  rating: Rating;
   color: string;
 };
 
 function getTagline(rating: string) {
-  if (rating === 'empty_pot') {
+  if (rating === RATING.new) {
     return "let's do this";
   }
-  if (rating === 'fresh_plant') {
+  if (rating === RATING.beginner) {
     return 'keep at it';
   }
-  if (rating === 'coming_along') {
+  if (rating === RATING.intermediate) {
     return 'you are doing great';
   }
   return 'great job';

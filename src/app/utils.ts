@@ -1,17 +1,19 @@
+import { Rating, RATING } from './config';
+
 export function getDateString(date: Date): string {
   const dateString = date.toISOString();
   return dateString.split('T')[0];
 }
 
-export function getRating(timesHabitCompleted: number): string {
+export function getRating(timesHabitCompleted: number): Rating {
   if (timesHabitCompleted === 0) {
-    return 'empty_pot';
+    return RATING.new;
   }
   if (timesHabitCompleted <= 10) {
-    return 'fresh_plant';
+    return RATING.beginner;
   }
   if (timesHabitCompleted <= 30) {
-    return 'coming_along';
+    return RATING.intermediate;
   }
-  return 'bloom';
+  return RATING.expert;
 }

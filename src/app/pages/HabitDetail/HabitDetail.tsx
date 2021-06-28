@@ -4,6 +4,7 @@ import { Habit } from '../../App';
 import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
 import PlantDetail from '../../components/PlantDetail/PlantDetail';
+
 import styles from './HabitDetail.module.css';
 
 type HabitDetailProps = {
