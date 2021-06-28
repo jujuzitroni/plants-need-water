@@ -7,7 +7,7 @@ function HabitListPlaceholder(): JSX.Element {
     <div className={styles.placeholder}>
       <p>No habits added yet!</p>
       <p>Let’s get started, plants need water after all.</p>
-      <PageLink variant="addNew" link="#">
+      <PageLink variant="addNew" link="/create-habit">
         <p>add new habit</p>
       </PageLink>
     </div>
