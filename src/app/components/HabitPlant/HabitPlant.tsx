@@ -5,23 +5,23 @@ import plant_bloom from '../../assets/plant_bloom.png';
 import empty_pot from '../../assets/empty_pot.png';
 
 type HabitPlantProps = {
-  rating: number;
+  rating: string;
 };
 
-function getHabitRating(rating: number) {
-  if (rating === 0) {
+function getImgSrc(rating: string) {
+  if (rating === 'empty_pot') {
     return {
       imgSrc: empty_pot,
       alt: 'empty flower pot',
     };
   }
-  if (rating <= 10) {
+  if (rating === 'fresh_plant') {
     return {
       imgSrc: plant_fresh,
       alt: 'small plant in a pot',
     };
   }
-  if (rating <= 30) {
+  if (rating === 'coming_along') {
     return {
       imgSrc: plant_coming_along,
       alt: 'a grown plant in a pot',
@@ -34,7 +34,7 @@ function getHabitRating(rating: number) {
 }
 
 function HabitPlant({ rating }: HabitPlantProps): JSX.Element {
-  const habitRating = getHabitRating(rating);
+  const habitRating = getImgSrc(rating);
 
   return <img src={habitRating.imgSrc} alt={habitRating.alt} />;
 }

@@ -8,7 +8,7 @@ import PageNav from '../../components/PageNav/PageNav';
 import HabitListPlaceholder from '../../components/HabitListPlaceholder/HabitListPlaceholder';
 import HabitItem from '../../components/HabitItem/HabitItem';
 import HabitPlant from '../../components/HabitPlant/HabitPlant';
-import { getDateString } from '../../utils';
+import { getDateString, getRating } from '../../utils';
 
 type HabitListProps = {
   habits: Habit[];
@@ -28,6 +28,7 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
           (item) => item !== dateString
         );
       }
+      habit.rating = getRating(habit.datesCompleted.length);
       setHabits([...habits]);
     }
 
@@ -40,7 +41,7 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
           color={habit.color}
           onHabitCheck={onHabitCheck}
         >
-          <HabitPlant rating={habit.datesCompleted.length} />
+          <HabitPlant rating={habit.rating} />
         </HabitItem>
       </li>
     );

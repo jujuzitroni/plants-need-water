@@ -19,7 +19,7 @@ function addHabit(name: string, color: string): Habit {
     color,
     dateCreated: new Date().getTime(),
     datesCompleted: [],
-    rating: '',
+    rating: 'empty_pot',
   };
 }
 
