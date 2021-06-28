@@ -27,20 +27,20 @@ function App(): JSX.Element {
     <Router>
       <Switch>
         <main>
-          <Route path="/create-habit">
-            <CreateHabit onHabitListChange={setHabitList} />
-          </Route>
           <Route exact path="/">
             <HabitList habits={habits} setHabits={setHabits} />
           </Route>
           <Route path="/calendar">
             <Calendar />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/create-habit">
+            <CreateHabit onHabitListChange={setHabitList} />
+            <Route path="/about">
+              <About />
+            </Route>
           </Route>
           <Route path="/detail">
-            <HabitDetail />
+            <HabitDetail habits={habits} />
           </Route>
         </main>
       </Switch>
