@@ -15,3 +15,12 @@ export const colors: string[] = [
   '#2F96FA',
   '#45C349',
 ];
+
+export type Rating = 'empty_pot' | 'fresh_plant' | 'coming_along' | 'bloom';
+
+export const RATING: Record<string, Rating> = {
+  new: 'empty_pot',
+  beginner: 'fresh_plant',
+  intermediate: 'coming_along',
+  expert: 'bloom',
+};

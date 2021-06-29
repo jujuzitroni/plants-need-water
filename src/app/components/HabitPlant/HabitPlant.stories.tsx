@@ -6,10 +6,16 @@ export default {
   component: HabitPlant,
 };
 
-export const NewlyPlanted = (): JSX.Element => <HabitPlant rating={0} />;
+export const NewlyPlanted = (): JSX.Element => (
+  <HabitPlant rating="empty_pot" />
+);
 
-export const FreshPlant = (): JSX.Element => <HabitPlant rating={10} />;
+export const FreshPlant = (): JSX.Element => (
+  <HabitPlant rating="fresh_plant" />
+);
 
-export const IntermediatePlant = (): JSX.Element => <HabitPlant rating={20} />;
+export const IntermediatePlant = (): JSX.Element => (
+  <HabitPlant rating="coming_along" />
+);
 
-export const PerfectPlant = (): JSX.Element => <HabitPlant rating={30} />;
+export const PerfectPlant = (): JSX.Element => <HabitPlant rating="bloom" />;

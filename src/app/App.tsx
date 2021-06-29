@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Rating } from './config';
 import About from './pages/About/About';
 import Calendar from './pages/Calendar/Calendar';
 import CreateHabit from './pages/CreateHabit/CreateHabit';
@@ -12,7 +13,7 @@ export type Habit = {
   color: string;
   dateCreated: number;
   datesCompleted: string[];
-  rating: string;
+  rating: Rating;
 };
 
 function App(): JSX.Element {
@@ -39,8 +40,8 @@ function App(): JSX.Element {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/detail">
-            <HabitDetail />
+          <Route path="/detail/:id">
+            <HabitDetail habits={habits} />
           </Route>
         </main>
       </Switch>

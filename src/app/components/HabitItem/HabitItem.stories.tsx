@@ -15,6 +15,6 @@ export const Habit = (): JSX.Element => (
     color="#FFD9B2"
     onHabitCheck={console.log}
   >
-    <HabitPlant rating={20} />
+    <HabitPlant rating="coming_along" />
   </HabitItem>
 );
