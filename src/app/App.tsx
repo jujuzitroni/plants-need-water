@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Rating } from './config';
 import About from './pages/About/About';
@@ -6,6 +6,7 @@ import Calendar from './pages/Calendar/Calendar';
 import CreateHabit from './pages/CreateHabit/CreateHabit';
 import HabitDetail from './pages/HabitDetail/HabitDetail';
 import HabitList from './pages/HabitList/HabitList';
+import { useLocalStorage } from './utils';
 
 export type Habit = {
   id: string;
@@ -17,9 +18,9 @@ export type Habit = {
 };
 
 function App(): JSX.Element {
-  const [habits, setHabits] = useState<Habit[]>([]);
+  const [habits, setHabits] = useLocalStorage<Habit[]>('habits', []);
 
-  function setHabitList(habit: Habit): void {
+  function addHabitToHabitList(habit: Habit): void {
     const updatedList = habits.concat(habit);
     setHabits(updatedList);
   }
@@ -35,7 +36,7 @@ function App(): JSX.Element {
             <Calendar />
           </Route>
           <Route path="/create-habit">
-            <CreateHabit onHabitListChange={setHabitList} />
+            <CreateHabit onHabitListChange={addHabitToHabitList} />
           </Route>
           <Route path="/about">
             <About />
