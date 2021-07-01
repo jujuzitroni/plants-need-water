@@ -1,4 +1,17 @@
-.calendar h2 {
-  color: thistle;
-  text-align: center;
+.container {
+  padding: 0.5em;
+}
+
+.tile {
+  background-color: #fff;
+  border-radius: 0;
+  height: 4em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.cal {
+  margin-top: 2em;
+  background-color: var(--main-color);
 }
