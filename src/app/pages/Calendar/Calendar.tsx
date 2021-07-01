@@ -1,18 +1,23 @@
 import React from 'react';
 import PageNav from '../../components/PageNav/PageNav';
 import styles from './Calendar.module.css';
+import Calendar from 'react-calendar';
 
-function Calendar(): JSX.Element {
+function CalendarPage(): JSX.Element {
   return (
-    <div className={styles.calendar}>
+    <div>
       <header>
         <PageNav />
       </header>
-      <main>
-        <h2>Calendar Placeholder</h2>
+      <main className={styles.container}>
+        <Calendar
+          className={styles.cal}
+          tileClassName={styles.tile}
+          showNavigation={true}
+        />
       </main>
     </div>
   );
 }
 
-export default Calendar;
+export default CalendarPage;
