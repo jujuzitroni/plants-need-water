@@ -1,6 +1,6 @@
 import React from 'react';
 import PageNav from '../../components/PageNav/PageNav';
-import styles from './Calendar.module.css';
+import styles from './CalendarPage.module.css';
 import Calendar, { CalendarTileProperties } from 'react-calendar';
 import { Habit } from '../../App';
 import { getDateString } from '../../utils';
