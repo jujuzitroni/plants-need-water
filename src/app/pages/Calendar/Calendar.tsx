@@ -2,10 +2,10 @@ import React from 'react';
 import PageNav from '../../components/PageNav/PageNav';
 import styles from './Calendar.module.css';
 import Calendar, { CalendarTileProperties } from 'react-calendar';
-import CalendarTile from '../../components/CalendarTile/CalendarTile';
 import { Habit } from '../../App';
 import { getDateString } from '../../utils';
 import { useHistory } from 'react-router';
+import TileColors from '../../components/TileColors/TileColors';
 
 type CalendarPageProps = {
   habits: Habit[];
@@ -24,7 +24,7 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
       habit.datesCompleted.includes(dateString)
     );
     const colorsOnThisDate = habitsOnThisDate.map((habit) => habit.color);
-    return <CalendarTile colors={colorsOnThisDate} />;
+    return <TileColors colors={colorsOnThisDate} />;
   }
 
   function goToHabitList(date: Date) {
