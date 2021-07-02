@@ -1,0 +1,10 @@
+.colorTile {
+  display: flex;
+}
+
+.colorDot {
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.1em;
+  border-radius: 50%;
+}
