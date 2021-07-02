@@ -32,8 +32,11 @@ function App(): JSX.Element {
           <Route exact path="/">
             <HabitList habits={habits} setHabits={setHabits} />
           </Route>
+          <Route path="/habits/:timestamp">
+            <HabitList habits={habits} setHabits={setHabits} />
+          </Route>
           <Route path="/calendar">
-            <Calendar />
+            <Calendar habits={habits} />
           </Route>
           <Route path="/create-habit">
             <CreateHabit onHabitListChange={addHabitToHabitList} />
