@@ -15,7 +15,7 @@ function PageNav(): JSX.Element {
         }
         to="/"
       >
-        list
+        daily
       </Link>
       <Link
         className={
