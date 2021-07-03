@@ -11,23 +11,31 @@ function About(): JSX.Element {
       <main className={styles.aboutHeadline}>
         <h1>about plants need water</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-          dolores beatae? Culpa ratione sapiente voluptatum explicabo
-          praesentium tempora expedita, obcaecati voluptate. Ut, libero?
-          Repudiandae explicabo voluptas in. Recusandae, doloribus perferendis!
-          Labore minima ea rem non aspernatur sequi natus expedita cupiditate
-          ipsam dicta eveniet placeat, numquam harum excepturi vitae. Id sit
-          facere deleniti, dolores sed eos aperiam. Esse numquam est fuga? Ipsam
-          eum excepturi suscipit sit amet magni voluptatibus voluptas possimus
-          soluta ipsa, molestias corporis impedit neque recusandae esse aliquam
-          laborum! Consectetur labore est doloribus ex nulla eum, harum facilis
-          ipsa. Iusto alias praesentium tenetur nesciunt ea earum vero
-          temporibus, facilis eveniet error corporis pariatur saepe quasi qui
-          enim quo aliquid sed nulla? Aliquid eum ab quia excepturi corporis
-          perspiciatis consequatur. Reprehenderit, nihil! Iure maiores culpa
-          doloribus rerum quam. Laudantium fugiat ullam ab hic, odio illum!
-          Dolorum, magni eos ratione amet impedit sapiente natus veritatis
-          voluptatum! Fuga neque accusantium quo laudantium.
+          When I first started my coding journey, in the very first JavaScript
+          tutorial I did, there was an assignment to write an if statement. The
+          goal was to write a function that would check the current weekday and
+          return if it was time to water the plants. So on a certain day the
+          function would return ‘plants need water’. This expression became the
+          catchphrase for my coding journey: should I go outside or should I do
+          the next chapter of the tutorial? Well, plants need water, so coding
+          it is.
+        </p>
+
+        <p>
+          The metaphor is simple. And so is the concept it represents. If you
+          want to grow or evolve in any area, you need to tend to it. water it,
+          so it can grow.
+        </p>
+        <p>
+          In a society that worships busyness, we measure everything we do in
+          terms of how productive it makes us. Even selfcare gets turned into
+          #selfcare, a means to an end. Taking care of yourself so you can keep
+          on hustling.
+        </p>
+        <p>
+          Plants need water strives to support you in your growth without adding
+          pressure. It shifts the focus from performance at any cost to
+          nurturing the inner plant.
         </p>
       </main>
     </div>
