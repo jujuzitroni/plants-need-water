@@ -16,7 +16,7 @@
   width: 3em;
   height: 3em;
   border-radius: 0.25em;
-  border: 1px solid #707070;
+  border: 1px solid var(--border-color);
   background-color: #fff;
 }
 
@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-row-gap: 1em;
-  border: 1px solid #707070;
+  border: 1px solid var(--border-color);
   border-radius: 0.25em;
   padding: 1em 0;
   margin: 0;
