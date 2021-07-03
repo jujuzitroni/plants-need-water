@@ -27,8 +27,8 @@ function App(): JSX.Element {
 
   return (
     <Router>
-      <Switch>
-        <main>
+      <main>
+        <Switch>
           <Route exact path="/">
             <HabitList habits={habits} setHabits={setHabits} />
           </Route>
@@ -42,10 +42,10 @@ function App(): JSX.Element {
             <About />
           </Route>
           <Route path="/detail/:id">
-            <HabitDetail habits={habits} />
+            <HabitDetail />
           </Route>
-        </main>
-      </Switch>
+        </Switch>
+      </main>
     </Router>
   );
 }
