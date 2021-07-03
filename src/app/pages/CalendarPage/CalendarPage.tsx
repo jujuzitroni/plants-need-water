@@ -6,6 +6,7 @@ import { Habit } from '../../App';
 import { getDateString } from '../../utils';
 import { useHistory } from 'react-router';
 import TileColors from '../../components/TileColors/TileColors';
+import { addHours } from 'date-fns';
 
 type CalendarPageProps = {
   habits: Habit[];
@@ -28,7 +29,7 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
   }
 
   function goToHabitList(date: Date) {
-    const timestamp = date.getTime();
+    const timestamp = addHours(date, 2).getTime();
     history.push(`/habits/${timestamp}`);
   }
 
