@@ -9,11 +9,11 @@ export const colors: string[] = [
   '#CB970A',
   '#F47B71',
   '#56A59B',
-  '#6CC4C7',
-  '#CADCDC',
+  '#FFFABC',
+  '#6F8888',
   '#FA5735',
   '#2F96FA',
-  '#45C349',
+  '#A4DDA6',
 ];
 
 export type Rating = 'empty_pot' | 'fresh_plant' | 'coming_along' | 'bloom';
