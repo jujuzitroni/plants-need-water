@@ -12,14 +12,6 @@
   flex-direction: column;
 }
 
-.footer {
-  display: flex;
-  background-color: var(--secondary-color);
-  height: 8em;
-  padding: 1em;
-  align-items: flex-end;
-}
-
 .habitList {
   display: grid;
   grid-row-gap: 1em;
@@ -29,4 +21,19 @@
   list-style: none;
   width: 100%;
   max-width: 30em;
+  max-height: 18em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.habitList::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  background-color: var(--secondary-color);
+  height: 6em;
+  padding: 1em;
+  align-items: flex-end;
 }

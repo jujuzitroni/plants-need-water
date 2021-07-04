@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Rating } from './config';
 import About from './pages/About/About';
-import Calendar from './pages/Calendar/Calendar';
+import CalendarPage from './pages/CalendarPage/CalendarPage';
 import CreateHabit from './pages/CreateHabit/CreateHabit';
 import HabitDetail from './pages/HabitDetail/HabitDetail';
 import HabitList from './pages/HabitList/HabitList';
@@ -27,13 +27,16 @@ function App(): JSX.Element {
 
   return (
     <Router>
-      <Switch>
-        <main>
+      <main>
+        <Switch>
           <Route exact path="/">
             <HabitList habits={habits} setHabits={setHabits} />
           </Route>
+          <Route path="/habits/:timestamp">
+            <HabitList habits={habits} setHabits={setHabits} />
+          </Route>
           <Route path="/calendar">
-            <Calendar />
+            <CalendarPage habits={habits} />
           </Route>
           <Route path="/create-habit">
             <CreateHabit onHabitListChange={addHabitToHabitList} />
@@ -42,10 +45,10 @@ function App(): JSX.Element {
             <About />
           </Route>
           <Route path="/detail/:id">
-            <HabitDetail habits={habits} />
+            <HabitDetail />
           </Route>
-        </main>
-      </Switch>
+        </Switch>
+      </main>
     </Router>
   );
 }

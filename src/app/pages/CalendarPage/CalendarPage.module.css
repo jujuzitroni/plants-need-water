@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.main {
+  padding: 0.5em;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 0;
+  height: 4em;
+  border: 1px solid var(--main-color);
+}
+
+.calendar {
+  margin-top: 2em;
+  background-color: var(--main-color);
+}
+
+.footer {
+  display: flex;
+  background-color: var(--secondary-color);
+  height: 6em;
+  padding: 1em;
+  align-items: flex-end;
+}
