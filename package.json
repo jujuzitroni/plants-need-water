@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate",
-  "version": "0.0.0",
+  "name": "plants-need-water",
+  "version": "1.0.0",
   "scripts": {
     "client:dev": "vite",
     "server:dev": "tsnd --project tsconfig.server.json src/server",
