@@ -9,14 +9,20 @@ import HabitListPlaceholder from '../../components/HabitListPlaceholder/HabitLis
 import HabitItem from '../../components/HabitItem/HabitItem';
 import HabitPlant from '../../components/HabitPlant/HabitPlant';
 import { getDateString, getRating } from '../../utils';
+import { useParams } from 'react-router-dom';
 
 type HabitListProps = {
   habits: Habit[];
   setHabits: (habits: Habit[]) => void;
 };
 
+type HabitListParams = {
+  timestamp: string;
+};
+
 function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
-  const date = new Date();
+  const { timestamp } = useParams<HabitListParams>();
+  const date = timestamp ? new Date(Number(timestamp)) : new Date();
   const dateString = getDateString(date);
 
   function toListElement(habit: Habit): JSX.Element {
