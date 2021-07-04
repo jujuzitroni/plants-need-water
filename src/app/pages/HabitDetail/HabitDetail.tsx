@@ -40,7 +40,7 @@ function HabitDetail(): JSX.Element {
           <span>started tracking: </span>
           <span>{formattedDate}</span>
         </article>
-        <article className={styles.stat__completed}>
+        <article className={styles.stat}>
           <span>
             completed on <span>{datesCompleted.length}</span> days
           </span>
