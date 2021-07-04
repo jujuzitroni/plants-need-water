@@ -62,7 +62,9 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
         <SwipeDate dateString={dateString} />
 
         {habits.length ? (
-          <ul className={styles.habitList}>{habits.map(toListElement)}</ul>
+          <ul className={styles.habitList}>
+            {habits.map(toListElement).reverse()}
+          </ul>
         ) : (
           <HabitListPlaceholder />
         )}
