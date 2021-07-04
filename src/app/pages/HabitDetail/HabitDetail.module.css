@@ -1,3 +1,20 @@
 .DetailPage {
   display: grid;
+  gap: 0.5em;
+  padding: 1em;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.stat {
+  font-size: 1.5em;
+  margin: 1.5em;
+  text-align: center;
+}
+
+.footer__bar {
+  width: 100%;
+  height: 0.4em;
+  background-color: var(--secondary-color);
+  margin-bottom: 0.5em;
 }
