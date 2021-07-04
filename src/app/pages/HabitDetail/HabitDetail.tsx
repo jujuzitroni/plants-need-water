@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { Habit } from '../../App';
 import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
@@ -7,20 +7,26 @@ import DeleteIcon from '../../components/Icons/DeleteIcon';
 import PlantDetail from '../../components/PlantDetail/PlantDetail';
 import { format } from 'date-fns';
 import styles from './HabitDetail.module.css';
-
-type HabitDetailProps = {
-  habits: Habit[];
-};
+import { useLocalStorage } from '../../utils';
 
 type HabitDetailParams = {
   id: string;
 };
 
-function HabitDetail({ habits }: HabitDetailProps): JSX.Element {
+function HabitDetail(): JSX.Element {
+  const [habits, setHabits] = useLocalStorage<Habit[]>('habits', []);
   const { id } = useParams<HabitDetailParams>();
+  const history = useHistory();
   const habit = habits.find((item) => item.id === id);
   const { rating, color, name, dateCreated, datesCompleted } = habit as Habit;
   const formattedDate = format(dateCreated, 'd.L.');
+
+  function handleClick() {
+    const updatedList = habits.filter((habit) => habit.id !== id);
+    setHabits(updatedList);
+    history.push('/');
+    window.location.reload();
+  }
 
   return (
     <div className={styles.DetailPage}>
@@ -42,7 +48,7 @@ function HabitDetail({ habits }: HabitDetailProps): JSX.Element {
       </main>
       <footer>
         <div className={styles.footer__bar} />
-        <Button variant="delete">
+        <Button variant="delete" onClick={handleClick}>
           <DeleteIcon />
           Delete Habit
         </Button>
