@@ -1,7 +1,7 @@
 import React from 'react';
 import PlusIcon from '../../components/Icons/PlusIcon';
 import PageLink from '../../components/PageLink/PageLink';
-import SwipeDate from '../../components/SwipeDate/SwipeDate';
+import CurrentDate from '../../components/CurrentDate/CurrentDate';
 import styles from './HabitList.module.css';
 import { Habit } from '../../App';
 import PageNav from '../../components/PageNav/PageNav';
@@ -59,7 +59,7 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
         <PageNav />
       </header>
       <main className={styles.main}>
-        <SwipeDate dateString={dateString} />
+        <CurrentDate dateString={dateString} />
 
         {habits.length ? (
           <ul className={styles.habitList}>
