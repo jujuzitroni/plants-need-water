@@ -8,7 +8,6 @@ import { useHistory } from 'react-router';
 import TileColors from '../../components/TileColors/TileColors';
 import { addHours } from 'date-fns';
 import PageLink from '../../components/PageLink/PageLink';
-import { subHours } from 'date-fns/esm';
 
 type CalendarPageProps = {
   habits: Habit[];
