@@ -1,7 +1,7 @@
 import React from 'react';
 import PlusIcon from '../../components/Icons/PlusIcon';
 import PageLink from '../../components/PageLink/PageLink';
-import SwipeDate from '../../components/SwipeDate/SwipeDate';
+import CurrentDate from '../../components/CurrentDate/CurrentDate';
 import styles from './HabitList.module.css';
 import { Habit } from '../../App';
 import PageNav from '../../components/PageNav/PageNav';
@@ -59,10 +59,12 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
         <PageNav />
       </header>
       <main className={styles.main}>
-        <SwipeDate dateString={dateString} />
+        <CurrentDate dateString={dateString} />
 
         {habits.length ? (
-          <ul className={styles.habitList}>{habits.map(toListElement)}</ul>
+          <ul className={styles.habitList}>
+            {habits.map(toListElement).reverse()}
+          </ul>
         ) : (
           <HabitListPlaceholder />
         )}
@@ -73,7 +75,7 @@ function HabitList({ setHabits, habits }: HabitListProps): JSX.Element {
       </main>
       <footer className={styles.footer}>
         <PageLink variant="about" link="/about">
-          <span>about plants need water</span>
+          about plants need water
         </PageLink>
       </footer>
     </div>

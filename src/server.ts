@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express';
 import path from 'path';
 
@@ -15,10 +18,6 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'app/index.html'));
 });
 
-app.get('/', (_req, res) => {
-  res.send('Hello World!');
-});
-
 app.listen(PORT, () => {
-  console.log(`boilerplate app listening at http://localhost:${PORT}`);
+  console.log(`plants need water app listening at http://localhost:${PORT}`);
 });

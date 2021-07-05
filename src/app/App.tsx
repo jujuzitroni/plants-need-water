@@ -7,6 +7,7 @@ import CreateHabit from './pages/CreateHabit/CreateHabit';
 import HabitDetail from './pages/HabitDetail/HabitDetail';
 import HabitList from './pages/HabitList/HabitList';
 import { useLocalStorage } from './utils';
+import styles from './App.module.css';
 
 export type Habit = {
   id: string;
@@ -26,30 +27,32 @@ function App(): JSX.Element {
   }
 
   return (
-    <Router>
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <HabitList habits={habits} setHabits={setHabits} />
-          </Route>
-          <Route path="/habits/:timestamp">
-            <HabitList habits={habits} setHabits={setHabits} />
-          </Route>
-          <Route path="/calendar">
-            <CalendarPage habits={habits} />
-          </Route>
-          <Route path="/create-habit">
-            <CreateHabit onHabitListChange={addHabitToHabitList} />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/detail/:id">
-            <HabitDetail />
-          </Route>
-        </Switch>
-      </main>
-    </Router>
+    <div className={styles.container}>
+      <Router>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <HabitList habits={habits} setHabits={setHabits} />
+            </Route>
+            <Route path="/habits/:timestamp">
+              <HabitList habits={habits} setHabits={setHabits} />
+            </Route>
+            <Route path="/calendar">
+              <CalendarPage habits={habits} />
+            </Route>
+            <Route path="/create-habit">
+              <CreateHabit onHabitListChange={addHabitToHabitList} />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/detail/:id">
+              <HabitDetail />
+            </Route>
+          </Switch>
+        </main>
+      </Router>
+    </div>
   );
 }
 

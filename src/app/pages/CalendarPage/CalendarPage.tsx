@@ -7,6 +7,7 @@ import { getDateString } from '../../utils';
 import { useHistory } from 'react-router';
 import TileColors from '../../components/TileColors/TileColors';
 import { addHours } from 'date-fns';
+import PageLink from '../../components/PageLink/PageLink';
 
 type CalendarPageProps = {
   habits: Habit[];
@@ -20,7 +21,8 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
       return null;
     }
 
-    const dateString = getDateString(date);
+    // account for timezone
+    const dateString = getDateString(addHours(date, 2));
     const habitsOnThisDate = habits.filter((habit) =>
       habit.datesCompleted.includes(dateString)
     );
@@ -29,16 +31,17 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
   }
 
   function goToHabitList(date: Date) {
+    // account for timezone
     const timestamp = addHours(date, 2).getTime();
     history.push(`/habits/${timestamp}`);
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <header>
         <PageNav />
       </header>
-      <main className={styles.container}>
+      <main className={styles.main}>
         <Calendar
           className={styles.calendar}
           tileClassName={styles.tile}
@@ -46,6 +49,11 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
           onClickDay={goToHabitList}
         />
       </main>
+      <footer className={styles.footer}>
+        <PageLink variant="about" link="/about">
+          about plants need water
+        </PageLink>
+      </footer>
     </div>
   );
 }
