@@ -1,0 +1,78 @@
+[
+  {
+    "id": "ae3904ca-9245-4d77-91ff-46544e53d7d8",
+    "name": "go upstate",
+    "color": "#2F96FA",
+    "dateCreated": 1625434474112,
+    "datesCompleted": ["2021-07-03"],
+    "rating": "fresh_plant"
+  },
+  {
+    "id": "dfa66b35-3813-433d-b843-e1a4fca6edeb",
+    "name": "run away for the summer",
+    "color": "#FFFABC",
+    "dateCreated": 1625434493560,
+    "datesCompleted": ["2021-06-09", "2021-06-15"],
+    "rating": "fresh_plant"
+  },
+  {
+    "id": "1d0e98bd-f52e-49ad-9cbe-0b6da1228733",
+    "name": "take a break",
+    "color": "#6F8888",
+    "dateCreated": 1625434507811,
+    "datesCompleted": ["2021-06-30"],
+    "rating": "fresh_plant"
+  },
+  {
+    "id": "7643a49e-8620-4522-bd39-55ca84d7c81d",
+    "name": "morning yoga",
+    "color": "#DFEBEB",
+    "dateCreated": 1625434538982,
+    "datesCompleted": [
+      "2021-06-28",
+      "2021-06-10",
+      "2021-06-29",
+      "2021-06-17",
+      "2021-06-08",
+      "2021-06-07",
+      "2021-06-18",
+      "2021-06-14"
+    ],
+    "rating": "fresh_plant"
+  },
+  {
+    "id": "e0ff18a4-7c06-4570-b9bb-db3fdc8e5198",
+    "name": "no phone in bed",
+    "color": "#FFD9B2",
+    "dateCreated": 1625434554762,
+    "datesCompleted": ["2021-07-01", "2021-07-02", "2021-06-10"],
+    "rating": "fresh_plant"
+  },
+  {
+    "id": "dc79cb46-4eee-47dc-ad44-f57f6ec54fa6",
+    "name": "take afternoon nap",
+    "color": "#FFEA6D",
+    "dateCreated": 1625434572193,
+    "datesCompleted": ["2021-06-28", "2021-06-30", "2021-07-02"],
+    "rating": "bloom"
+  },
+  {
+    "id": "eb559c80-d1a5-4806-ae12-f8f646ea034b",
+    "name": "drink 2l water daily",
+    "color": "#FA5735",
+    "dateCreated": 1625434604471,
+    "datesCompleted": [
+      "2021-06-28",
+      "2021-06-30",
+      "2021-06-09",
+      "2021-06-16",
+      "2021-06-10",
+      "2021-06-07",
+      "2021-06-15",
+      "2021-06-21",
+      "2021-06-11",
+      "2021-06-22"
+    ],
+    "rating": "fresh_plant"
+  }
+]
