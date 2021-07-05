@@ -8,6 +8,7 @@ import { useHistory } from 'react-router';
 import TileColors from '../../components/TileColors/TileColors';
 import { addHours } from 'date-fns';
 import PageLink from '../../components/PageLink/PageLink';
+import { subHours } from 'date-fns/esm';
 
 type CalendarPageProps = {
   habits: Habit[];
@@ -21,7 +22,8 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
       return null;
     }
 
-    const dateString = getDateString(date);
+    // account for timezone
+    const dateString = getDateString(addHours(date, 2));
     const habitsOnThisDate = habits.filter((habit) =>
       habit.datesCompleted.includes(dateString)
     );
@@ -30,6 +32,7 @@ function CalendarPage({ habits }: CalendarPageProps): JSX.Element {
   }
 
   function goToHabitList(date: Date) {
+    // account for timezone
     const timestamp = addHours(date, 2).getTime();
     history.push(`/habits/${timestamp}`);
   }
