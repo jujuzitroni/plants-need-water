@@ -21,6 +21,7 @@
   margin: 0;
   list-style: none;
   width: 100%;
+  min-height: 18em;
   max-width: 30em;
   max-height: 18em;
   overflow-y: scroll;
