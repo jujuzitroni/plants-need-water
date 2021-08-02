@@ -6,7 +6,7 @@
 
 [Try it out!\*](https://plants-need-water.herokuapp.com/)
 
-\*\*The deployment takes a little longer to load the first time because Heroku's servers fall asleep. The app is designed for mobile. For a better experience, open the dev tools and switch to mobile view.
+\*The deployment takes a little longer to load the first time because Heroku's servers fall asleep. The app is designed for mobile. For a better experience, open the dev tools and switch to mobile view.
 
 ## Installing
 
